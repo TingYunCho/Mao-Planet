@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { JWT_GET_DATA } from '../config'
 import { withRouter } from 'react-router-dom'
 
 function AuthHeader(props) {
   const { setAuth } = props
   const token = localStorage.getItem('token')
+  //必須藥包在useEffect裡面才會在變動時
+  // useEffect(() => {
   if (token) {
     fetch(JWT_GET_DATA, {
       method: 'GET',
@@ -21,7 +23,8 @@ function AuthHeader(props) {
   } else {
     setAuth(false)
   }
-  return <></>
+  // }, [])
+  return <>{}</>
 }
 
 export default withRouter(AuthHeader)

@@ -83,6 +83,7 @@ function Login(props) {
       //儲存到localStorage
       alert('登入成功')
       props.history.push('/home')
+      // window.location.reload() //強制刷新頁面
     } else {
       alert('登入錯誤\n' + (data.error || ''))
     }

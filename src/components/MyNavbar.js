@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import { BiSearch, BiUser, BiHeart, BiHomeAlt, BiCartAlt } from 'react-icons/bi'
+import Avatar from './Avatar'
 import logo from '../images/logo.svg'
 import '../Styles/MyNavbar.scss'
 
@@ -105,7 +106,7 @@ function MyNavbar(props) {
             )}
             {auth && (
               <Nav.Link as={NavLink} to="/admin" className="navicon">
-                <BiUser />
+                <Avatar />
               </Nav.Link>
             )}
             <Nav.Link href="#/" className="navicon">

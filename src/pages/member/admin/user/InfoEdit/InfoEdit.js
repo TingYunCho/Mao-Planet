@@ -79,7 +79,7 @@ function InfoEdit(props) {
   //   })()
   // }, [])
 
-  //專用元件:地址、地區(還沒做)=================================================
+  //==============================================
   const doUpload = async () => {
     const fd = new FormData(document.form1)
     const r = await axios.post(UPLOAD_AVATAR, fd)
