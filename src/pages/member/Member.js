@@ -20,6 +20,7 @@ function Member(props) {
         onClick={() => {
           logout()
           props.history.push('/home')
+          window.location.reload() //強制刷新頁面
         }}
         className="btn btn-primary"
       >
